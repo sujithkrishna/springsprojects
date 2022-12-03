@@ -8,7 +8,9 @@ public class Employee {
 	private String empName;
 	@Autowired
 	private Address address;
-
+	@Autowired
+	private Computer computer;
+	
 	public Employee() {
 	}
 
@@ -47,10 +49,20 @@ public class Employee {
 		this.address = address;
 	}
 
+	
+	public Computer getComputer() {
+		return computer;
+	}
+
+	public void setComputer(Computer computer) {
+		this.computer = computer;
+	}
+
 	public String toString() {
 		String emp = "Employee [empNo=" + empNo + ", empName=" + empName + "]";
 		String address = getAddress().toString();
-		return emp + "\n" + address;
+		String computer = getComputer().getComputer();
+		return emp + "\n" + address +"\n"+computer;
 	}
 
 }

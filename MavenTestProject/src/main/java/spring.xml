@@ -6,11 +6,17 @@
 	prototype -> create the object when we call getBean method , if you are not requesting it will not create.
 	singleton -> create only one object for all the getBean method , if you are not requesting also it will create one object for this.
 	by default is singleton
+	
+	
+	autowire="byName" - > if the property is ref is same as another type by id is there then automattically its pick
+	
+	primary in the bean will use the byType..
+	
 	 -->
-	<bean id="employee" class="com.krishna.mavenTestProjects.Employee"> 
+	<bean id="employee" class="com.krishna.mavenTestProjects.Employee" autowire="byType"> 
 		<property name="empNo" value="555"></property>
 		<property name="empName" value="Sujith Krishna"></property>
-		<property name="address" ref="coventryAddress"></property>
+		<property name="address" ref="indiaAddress"></property>
 		
 	</bean>
 
@@ -26,4 +32,8 @@
 		<constructor-arg name="city" value="Alappuzha"> </constructor-arg>
 	</bean>
 	
+	<bean id="computer" class="com.krishna.mavenTestProjects.Desktop" >
+	</bean>
+	<bean id="latop" class="com.krishna.mavenTestProjects.Laptop" primary="true">
+	</bean>
 </beans>
