@@ -27,9 +27,6 @@ public class Employee {
 		this.empName = empName;
 	}
 	public Employee() {
-		this.empNo=100;
-		this.empName="Krishna";
-		System.out.println("This is empployee cnostructor");
 	}
 	@Override
 	public String toString() {
