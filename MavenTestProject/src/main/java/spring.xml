@@ -8,13 +8,22 @@
 	by default is singleton
 	 -->
 	<bean id="employee" class="com.krishna.mavenTestProject.Employee"> 
-		<property name="empNo" value="5556"></property>
-		<property name="address" ref="address"></property>
+		<property name="empNo" value="555"></property>
+		<property name="empName" value="Sujith Krishna"></property>
+		<property name="address" ref="coventryAddress"></property>
 		
 	</bean>
 
-	<bean id="address" class="com.krishna.mavenTestProject.Address"> 
+	<bean id="coventryAddress" class="com.krishna.mavenTestProject.Address"> 
+		<constructor-arg name="address1" value="36 Cobden St" > </constructor-arg>
+		<constructor-arg name="address2" value="Coventry"> </constructor-arg>
+		<constructor-arg name="city" value="Coventry"> </constructor-arg>
 	</bean>
 	
+	<bean id="indiaAddress" class="com.krishna.mavenTestProject.Address"> 
+		<constructor-arg name="address1" value="Kaithavalappil House" > </constructor-arg>
+		<constructor-arg name="address2" value="Parayakad PO"> </constructor-arg>
+		<constructor-arg name="city" value="Alappuzha"> </constructor-arg>
+	</bean>
 	
 </beans>
