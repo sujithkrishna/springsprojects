@@ -21,6 +21,8 @@ public class Employee {
 		this.empName = empName;
 	}
 	public Employee() {
+		this.empNo=100;
+		this.empName="Krishna";
 	}
 	@Override
 	public String toString() {

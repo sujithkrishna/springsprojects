@@ -11,7 +11,7 @@ public class App {
 	  BeanFactory factory= new XmlBeanFactory(new FileSystemResource("spring.xml"));
 	  
 	  Employee empObj = (Employee)factory.getBean("employee");
-	  System.out.println(empObj.toString());
+	  System.out.println("This is to String from Employee : "+empObj.toString());
   
   }
 }
