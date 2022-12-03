@@ -1,9 +1,15 @@
-package com.krishna.MavenTestProject;
+package com.krishna.mavenTestProject;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
 
 	private int empNo;
 	private String empName;
+	
+	@Autowired
+	private Address address;
+	
 	public int getEmpNo() {
 		return empNo;
 	}
@@ -23,10 +29,20 @@ public class Employee {
 	public Employee() {
 		this.empNo=100;
 		this.empName="Krishna";
+		System.out.println("This is empployee cnostructor");
 	}
 	@Override
 	public String toString() {
-		return "Employee [empNo=" + empNo + ", empName=" + empName + "]";
+		
+		String emp= "Employee [empNo=" + empNo + ", empName=" + empName + "]";
+		String address= getAddress().toString();
+		return emp+"\n"+address;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	
 	

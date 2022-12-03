@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 
+	prototype -> create the object when we call getBean method , if you are not requesting it will not create.
+	singleton -> create only one object for all the getBean method , if you are not requesting also it will create one object for this.
+	by default is singleton
+	 -->
+	<bean id="employee" class="com.krishna.mavenTestProject.Employee"> 
+		<property name="empNo" value="5556"></property>
+		<property name="address" ref="address"></property>
+		
+	</bean>
+
+	<bean id="address" class="com.krishna.mavenTestProject.Address"> 
+	</bean>
+	
+	
+</beans>

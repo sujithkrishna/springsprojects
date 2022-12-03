@@ -1,17 +1,21 @@
-package com.krishna.MavenTestProject;
+package com.krishna.mavenTestProject;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
   public static void main(String[] args) {
 
 	  
-	  BeanFactory factory= new XmlBeanFactory(new FileSystemResource("spring.xml"));
+	 // BeanFactory factory= new XmlBeanFactory(new FileSystemResource("spring.xml"));
 	  
-	  Employee empObj = (Employee)factory.getBean("employee");
-	  System.out.println("This is to String from Employee : "+empObj.toString());
-  
+	  // Where the package start there we need to keep the xml
+	  
+	  ApplicationContext factory = new ClassPathXmlApplicationContext("spring.xml");
+	  
+	 Employee empObj1 = (Employee)factory.getBean("employee");
+	 System.out.println("This is to String from Employee 1: "+empObj1.toString());
+	
+	 
   }
 }
