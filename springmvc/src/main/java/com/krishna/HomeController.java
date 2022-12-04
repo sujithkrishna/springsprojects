@@ -1,5 +1,6 @@
 package com.krishna;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,10 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.krishna.model.Employee;
 
+@Controller
 public class HomeController {
 
 	
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String home() {
 		System.out.println("Home Page Requested...");
 		return "addEmployee";

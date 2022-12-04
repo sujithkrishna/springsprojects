@@ -1,9 +1,9 @@
 <html>
 <head>
-<title>Spring Boot Home Page</title>
+<title>Spring Home Page</title>
 </head>
 <body>
-	<h1> Spring Boot Home Page</h1>
+	<h1> Spring Home Page</h1>
 		<h4> Additions</h4>
 		<form action="add">
 			<input type="text" name="num1">
